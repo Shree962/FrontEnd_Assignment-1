@@ -44,3 +44,91 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.disc {
+    width: 110px;
+    height: 110px;
+    background: radial-gradient(circle, #38bdf8 8%, #111827 10%, #111827 55%, #475569 57%, #111827 60%);
+    border-radius: 50%;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.album h2 {
+    margin-top: 20px;
+    font-size: 21px;
+}
+
+.album p {
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.controls button {
+    background: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.playlist h2 {
+    margin-bottom: 20px;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #334155;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.track:hover {
+    transform: translateX(6px);
+    background: #475569;
+}
+
+.track p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.track button {
+    background: #0ea5e9;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .player {
+        grid-template-columns: 200px 1fr;
+        padding: 35px;
+    }
+}
+</style>
+</head>
